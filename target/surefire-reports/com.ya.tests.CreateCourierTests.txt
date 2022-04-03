@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------
+Test set: com.ya.tests.CreateCourierTests
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 1.575 s <<< FAILURE! - in com.ya.tests.CreateCourierTests
+createCourierWithSameData(com.ya.tests.CreateCourierTests)  Time elapsed: 0.94 s  <<< FAILURE!
+java.lang.AssertionError: 
+Unknown error message 
+Expected: "Ётот логин уже используетс€"
+     but: was "Ётот логин уже используетс€. ѕопробуйте другой."
+	at com.ya.tests.CreateCourierTests.createCourierWithSameData(CreateCourierTests.java:54)
+

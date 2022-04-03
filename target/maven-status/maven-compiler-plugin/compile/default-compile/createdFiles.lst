@@ -1,0 +1,4 @@
+com\ya\client\ScooterRestClient.class
+com\ya\utils\CourierGenerator.class
+com\ya\client\CourierClient.class
+com\ya\model\Courier.class
