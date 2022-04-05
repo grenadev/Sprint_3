@@ -1,0 +1,6 @@
+com\ya\tests\CreateCourierTests.class
+com\ya\tests\UnknownCourierLoginTest.class
+com\ya\tests\CourierLoginTest.class
+com\ya\tests\ChooseColorInCreateOrder.class
+com\ya\tests\CourierCreateWithoutData.class
+com\ya\tests\GetOrdersTest.class
