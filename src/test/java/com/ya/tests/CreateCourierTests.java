@@ -38,7 +38,7 @@ public class CreateCourierTests {
         boolean createdStatus = loginResponse.extract().body().path("ok");
 
         assertThat("Courier cannot login", statusCode, equalTo(201));
-        assertThat("Unknown error message ", createdStatus , equalTo(true));
+        assertThat("Error text is different than expected", createdStatus , equalTo(true));
     }
 
     @Test
@@ -51,6 +51,6 @@ public class CreateCourierTests {
         String errorMessage = loginResponse.extract().body().path("message");
 
         assertThat("Courier cannot login", statusCode, equalTo(409));
-        assertThat("Unknown error message ", errorMessage , equalTo("Этот логин уже используется"));
+        assertThat("Error text is different than expected", errorMessage , equalTo("Этот логин уже используется. Попробуйте другой."));
     }
 }

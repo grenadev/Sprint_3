@@ -39,7 +39,7 @@ public class CourierLoginTest {
         String errorMessage = loginResponse.extract().body().path("message");
 
         assertThat("Courier cannot login", statusCode, equalTo(404));
-        assertThat("Unknown error message ", errorMessage, equalTo("Учетная запись не найдена"));
+        assertThat("Error text is different than expected", errorMessage, equalTo("Учетная запись не найдена"));
     }
 
     @Test
@@ -62,7 +62,7 @@ public class CourierLoginTest {
         String errorMessage = loginResponse.extract().body().path("message");
 
         assertThat("Courier success login without login", statusCode, equalTo(400));
-        assertThat("Unknown error message ", errorMessage, equalTo("Недостаточно данных для входа"));
+        assertThat("Error text is different than expected", errorMessage, equalTo("Недостаточно данных для входа"));
 
     }
 
@@ -75,6 +75,6 @@ public class CourierLoginTest {
         String errorMessage = loginResponse.extract().body().path("message");
 
         assertThat("Courier success login without login", statusCode, equalTo(400));
-        assertThat("Unknown error message ", errorMessage, equalTo("Недостаточно данных для входа"));
+        assertThat("Error text is different than expected", errorMessage, equalTo("Недостаточно данных для входа"));
     }
 }

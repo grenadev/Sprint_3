@@ -33,7 +33,7 @@ public class CourierCreateWithoutData {
         String createdError = loginResponse.extract().body().path("message");
 
         assertThat("Courier create without login", statusCode, equalTo(400));
-        assertThat("Unknown error message ", createdError, equalTo("Недостаточно данных для создания учетной записи"));
+        assertThat("Error text is different than expected", createdError, equalTo("Недостаточно данных для создания учетной записи"));
     }
 
     @Test
@@ -47,7 +47,7 @@ public class CourierCreateWithoutData {
         String createdError = loginResponse.extract().body().path("message");
 
         assertThat("Courier create without FirstName", statusCode, equalTo(400));
-        assertThat("Unknown error message ", createdError, equalTo("Недостаточно данных для создания учетной записи"));
+        assertThat("Error text is different than expected", createdError, equalTo("Недостаточно данных для создания учетной записи"));
     }
 
     @Test
@@ -61,6 +61,6 @@ public class CourierCreateWithoutData {
         String createdError = loginResponse.extract().body().path("message");
 
         assertThat("Courier create without password", statusCode, equalTo(400));
-        assertThat("Unknown error message ", createdError, equalTo("Недостаточно данных для создания учетной записи"));
+        assertThat("Error text is different than expected", createdError, equalTo("Недостаточно данных для создания учетной записи"));
     }
 }

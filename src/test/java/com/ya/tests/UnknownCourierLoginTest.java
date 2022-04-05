@@ -35,6 +35,6 @@ public class UnknownCourierLoginTest {
         String errorMessage = loginResponse.extract().body().path("message");
 
         assertThat("Courier success login", statusCode, equalTo(404));
-        assertThat("Unknown error message ", errorMessage, equalTo("Учетная запись не найдена"));
+        assertThat("Error text is different than expected", errorMessage, equalTo("Учетная запись не найдена"));
     }
 }

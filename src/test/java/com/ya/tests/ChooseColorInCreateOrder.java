@@ -8,6 +8,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 
+import java.util.Arrays;
 import java.util.List;
 
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -15,6 +16,7 @@ import static org.hamcrest.Matchers.*;
 
 @RunWith(Parameterized.class)
 public class ChooseColorInCreateOrder {
+
     CourierClient courierClient;
     private final String color;
 
@@ -27,7 +29,7 @@ public class ChooseColorInCreateOrder {
         this.color = color;
     }
 
-    @Parameterized.Parameters
+    @Parameterized.Parameters(name = "Тестовые данные: {0}")
     public static List<String> getColor() {
         return List.of("\"BLACK\"",
                 "\"GREY\"",
